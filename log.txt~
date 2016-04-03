@@ -1,0 +1,107 @@
+.8028
+
+local: .807   kaggle: .809865
++--------------+-----------------+-------+
+ | target_label | predicted_label | count |
+ +--------------+-----------------+-------+
+ |      0       |        1        |   62  |
+ |      1       |        1        |   15  |
+ |      1       |        0        |  562  |
+ |      0       |        0        | 14635 |
+ +--------------+-----------------+-------
+
+
+local: 0.8301   kaggle: .8291097    log_loss': 0.14103486663622974,
+ +--------------+-----------------+-------+
+ | target_label | predicted_label | count |
+ +--------------+-----------------+-------+
+ |      1       |        0        |  577  |
+ |      0       |        0        | 14695 |
+ |      0       |        1        |   2   |
+ +--------------+-----------------+-------+
+
+
+=> removed duplicated columns
+local: 0.83299   kaggle: .830719   log_loss': 0.14071915594706608
+
+ +--------------+-----------------+-------+
+ | target_label | predicted_label | count |
+ +--------------+-----------------+-------+
+ |      0       |        1        |   3   |
+ |      1       |        0        |  577  |
+ |      0       |        0        | 14694 |
+ +--------------+-----------------+-------+
+
+
+
+Removed duplicated
+
+['ind_var29_0', 'ind_var29', 'ind_var13_medio', 'ind_var18', 'ind_var26', 'ind_var25', 'ind_var32', 'ind_var34', 'ind_var37', 'ind_var39', 'num_var29_0', 'num_var29', 'num_var13_medio', 'num_var18', 'num_var26', 'num_var25', 'num_var32', 'num_var34', 'num_var37', 'num_var39', 'saldo_var29', 'saldo_medio_var13_medio_ult1', 'delta_num_reemb_var13_1y3', 'delta_num_reemb_var17_1y3', 'delta_num_reemb_var33_1y3', 'delta_num_trasp_var17_in_1y3', 'delta_num_trasp_var17_out_1y3', 'delta_num_trasp_var33_
+in_1y3', 'delta_num_trasp_var33_out_1y3']
+
+==============================================
+Observations:
+
+Sum of 0s doesn't help accuracy
+===========================================
+
+
+
+
+Explanation of variables:
+var15 -> ages
+var3 = nationality
+
+imp_ent_varX => importe entidad => amount for the bank office
+
+imp_op_varX_comer => importe opcion comercial => amount for commercial option
+
+imp_sal_varX => importe salario => amount for wage
+
+ind_varX_corto => indicador corto => short (time lapse?) indicator/dummy
+
+ind_varX_medio => indicador medio => medium-sized (time lapse?) indicator/dummy
+
+ind_varX_largo => indicador largo => long-sized (time lapse?) indicator/dummy
+
+saldo_varX => saldo => balance
+
+delta_imp_amort_varX_1y3 => importe amortizaci\F3n 1 y 3 => amount/price for redemption (?) 1 and 3
+
+delta_imp_aport_varX_1y3 => importe aportaci\F3n 1 y 3 => amount/price for contribution (?) 1 and 3
+
+delta_imp_reemb_varX_1y3 => importe reembolso 1 y 3 => amount/price for refund 1 and 3
+
+delta_imp_trasp_varX_out_1y3 => importe traspaso 1 y 3 => amount/price for transfer 1 and 3
+
+imp_venta_varX => importe venta => sale fee.
+
+ind_varX_emit_ult1 => indicador emitido => indicator of emission
+
+ind_varX_recib_ult1 => indicador recibido => indicator of reception
+
+num_varX_hace2 => n\FAmero hace 2 => number [of variable X ] done two units in the past
+
+num_med_varX => n\FAmero medio => mean number [of variable X]
+
+num_meses_varX => n\FAmero de meses => number of months [for variable X]
+
+saldo_medio_varX => saldo medio => average balance
+
+delta_imp_venta_varX_1y3 = > importe de venta 1 y 3 => fee on sales [for variable X] 1 and 3
+
+------------------------------------------------
+"imp" (importe) could also mean amount (e.g transferred amount), not necessarily fee.
+
+"delta" seems to refer to the difference in the variable between two periods.
+
+"amort" is probably -as in English- (loan) amortization
+
+"num_op" I guess is n\FAmero de operaciones= number of transactions
+
+"efect" can be efectivo (cash)
+
+"corto", "medio", "largo" sound like short-, medium-, long- term
+
+var38 -> might be mortgage
+https://www.kaggle.com/c/santander-customer-satisfaction/forums/t/19895/var38-is-mortgage-value
