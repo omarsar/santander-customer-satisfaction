@@ -4,7 +4,7 @@ local auc:  0.88249 , kaggle: 0.836406, submission 14, increase(0.005687)
 
 Graphlab
 Combined predictions from sklearn model to graphlab
-kaggle: 0.837423 submission17.txt 
+kaggle: 0.837423 -> submission17.txt 
 
 ===========================
 Kaggle AUC went down when added patch for nationality -999999 and 0
