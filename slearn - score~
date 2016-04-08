@@ -6,6 +6,15 @@ Graphlab
 Combined predictions from sklearn model to graphlab
 kaggle: 0.837423 -> submission17.txt 
 
+======================
+Fixed bug of adding features (sum of 0) to the test data as well:
+local: 0.88249 kaggle: 0.839309
+
+======================
+Improved by adding binary features for categorixal features separately and deleting original features
+local: 0.88281 kaggle: 0.839864
+
+
 ===========================
 Kaggle AUC went down when added patch for nationality -999999 and 0
 ==========================
